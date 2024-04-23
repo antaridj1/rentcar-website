@@ -9,19 +9,12 @@
 			</a>
 		</li>
 
-		{{-- <li class="nav-item">
-			<a class="nav-link {{Route::is('laporan.create')? '' : 'collapsed'}}" href="{{route('laporan.create')}}">
-				<i class="bi bi-pencil"></i>
-				<span>Buat Booking</span>
-			</a>
-		</li>
-
 		<li class="nav-item">
-			<a class="nav-link {{Route::is('laporan.edit', 'laporan.index', 'laporan.show')? '' : 'collapsed'}}" href="{{route('laporan.index')}}">
+			<a class="nav-link {{Route::is('car.*')? '' : 'collapsed'}}" href="{{route('car.index')}}">
 				<i class="bi bi-journal-text"></i>
 				<span>Mobil</span>
 			</a>
-		</li> --}}
+		</li>
 
 
 	</ul>

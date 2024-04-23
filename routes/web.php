@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CarController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
@@ -27,14 +28,11 @@ Route::middleware('auth')->group(function(){
     Route::get('/profile', [UserController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [UserController::class, 'update'])->name('profile.update');
 
-    // Route::group(['prefix' => 'laporan', 'as' => 'laporan.'],function () {
-    //     Route::resource('/', LaporanController::class)->parameters([
-    //         '' => 'laporan'
-    //     ]);
-    //     Route::get('/menu', [LaporanController::class, 'menu'])->name('menu');
-    //     Route::patch('/{laporan}/verifikasi', [LaporanController::class, 'verifikasi'])->name('verifikasi');
-        
-    // });
+    Route::group(['prefix' => 'car', 'as' => 'car.'],function () {
+        Route::resource('/', CarController::class)->parameters([
+            '' => 'car'
+        ]);
+    });
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
