@@ -29,7 +29,38 @@ class CarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = [
+            'name' => 'required',
+            'seat'  => 'required|numeric|min:1',
+            'price' => 'required|numeric|min:1',
+            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg',
+        ];
+
+        if($request->is_with_driver == 1) {
+            $data['price_with_driver'] = 'required|numeric|min:1';
+        }
+
+        $request->validate($data);
+
+        $image_path = $request->file('image')->store('image', 'public');
+
+        $car = [
+            'name' => $request->name,
+            'seat'  => $request->seat,
+            'price' => $request->price,
+            'image' => $image_path,
+            'order_number' => Car::get()->count() + 1
+        ];
+
+        if($request->is_with_driver == 1) {
+            $data['price_with_driver'] = $request->price_with_driver;
+        }
+
+        Car::create($car);
+
+        return redirect('car')
+            ->with('status','success')
+            ->with('message','Data berhasil ditambah');
     }
 
     /**
@@ -53,7 +84,49 @@ class CarController extends Controller
      */
     public function update(Request $request, Car $car)
     {
-        //
+        $data = [
+            'name' => 'required',
+            'seat'  => 'required|numeric|min:1',
+            'price' => 'required|numeric|min:1',
+            'image' => 'image|mimes:jpg,png,jpeg,svg',
+        ];
+
+        if($request->is_with_driver == 1) {
+            $data['price_with_driver'] = 'required|numeric|min:1';
+        }
+
+        if($request->image){
+            $data['image'] = 'required|image|mimes:jpg,png,jpeg,svg';
+        }
+
+        $request->validate($data);
+
+        $image_path = $car->image;
+
+        if($request->image){
+            $image_path = $request->file('image')->store('image', 'public');
+        }
+
+        $newData = [
+            'name' => $request->name,
+            'seat'  => $request->seat,
+            'price' => $request->price,
+            'image' => $image_path,
+            'is_with_driver' => $request->is_with_driver,
+            'is_available' => $request->is_available
+        ];
+
+        if($request->is_with_driver == 1) {
+            $newData['price_with_driver'] = $request->price_with_driver;
+        } else {
+            $newData['price_with_driver'] = null;
+        }
+
+        Car::where('id',$car->id)->update($newData);
+
+        return redirect('car')
+            ->with('status','success')
+            ->with('message','Data berhasil ditambah');
     }
 
     /**

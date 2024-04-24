@@ -18,7 +18,8 @@ class CarSeeder extends Seeder
                 'name' => 'Toyota',
                 'seat'  => 4,
                 'image' => 'test.jpg',
-                'price' => 250000 
+                'price' => 250000,
+                'order_number' => 1,
             ]
         ];
 

@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 class DashboardController extends Controller
 {
     public function index(){
-        $cars = Car::all();
-        $totalCars = count($cars);
-        $countAvailableCars = Car::where('is_available',true)->count();
+        $cars = Car::where('is_available',true)->get();
+        $totalCars = count(Car::all());
+        $countAvailableCars = $cars->count();
         return view('admin.dashboard',compact('cars','countAvailableCars', 'totalCars'));
     }
 }

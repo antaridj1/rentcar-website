@@ -88,7 +88,7 @@
                         <div class="card recent-sales overflow-auto">
                             <div class="card-body">
                             <div class="d-flex justify-content-between">
-                                <h5 class="card-title">Data Mobil</h5>
+                                <h5 class="card-title">Mobil Tersedia</h5>
                                 <div class="mt-3">
                                 <a href="{{route('car.index')}}" class="btn btn-primary btn-sm">Lihat Semua</a>
                                 </div>

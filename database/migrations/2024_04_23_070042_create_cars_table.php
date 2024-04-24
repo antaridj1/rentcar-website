@@ -20,6 +20,7 @@ return new class extends Migration
             $table->boolean('is_with_driver')->default(false);
             $table->integer('price_with_driver')->nullable();
             $table->tinyInteger('is_available')->default(true);
+            $table->tinyInteger('order_number');
             $table->timestamps();
         });
     }
