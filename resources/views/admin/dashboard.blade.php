@@ -47,51 +47,33 @@
                         </div> 
                     </div> --}}
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-12 col-md-6">
                             <div class="card info-card sales-card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Mobil Dibooking <span>Hari Ini</span></h5>
+                                    <h5 class="card-title">Mobil Tersedia <span>Hari Ini</span></h5>
                                     <div class="d-flex align-items-center">
                                         <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                                             <i class="bi bi-cursor"></i>
                                         </div>
                                         <div class="ps-3">
-                                            <h6>2</h6>
-                                        
+                                            <h6>{{$countAvailableCars}}</h6>
                                             <span class="text-muted small pt-2 ps-1">Mobil</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        
+                        <div class="col-12 col-md-6">
                             <div class="card info-card sales-card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Mobil Dibooking <span>Hari Ini</span></h5>
+                                    <h5 class="card-title">Jumlah Mobil</h5>
                                     <div class="d-flex align-items-center">
                                         <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                                             <i class="bi bi-cursor"></i>
                                         </div>
                                         <div class="ps-3">
-                                            <h6>2</h6>
-                                        
-                                            <span class="text-muted small pt-2 ps-1">Mobil</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!-- End Terkirim -->
-                        <div class="col-4">
-                            <div class="card info-card sales-card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Mobil Dibooking <span>Hari Ini</span></h5>
-                                    <div class="d-flex align-items-center">
-                                        <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                            <i class="bi bi-cursor"></i>
-                                        </div>
-                                        <div class="ps-3">
-                                            <h6>2</h6>
-                                        
+                                            <h6>{{$totalCars}}</h6>
                                             <span class="text-muted small pt-2 ps-1">Mobil</span>
                                         </div>
                                     </div>
@@ -106,12 +88,12 @@
                         <div class="card recent-sales overflow-auto">
                             <div class="card-body">
                             <div class="d-flex justify-content-between">
-                                <h5 class="card-title">Laporan <span>| Hari Ini</span></h5>
+                                <h5 class="card-title">Data Mobil</h5>
                                 <div class="mt-3">
-                                <a href="/" class="btn btn-primary btn-sm">Lihat Semua</a>
+                                <a href="{{route('car.index')}}" class="btn btn-primary btn-sm">Lihat Semua</a>
                                 </div>
                             </div>
-                            {{-- @include('laporan._table') --}}
+                            @include('admin.car._table')
 
                             </div>
 
