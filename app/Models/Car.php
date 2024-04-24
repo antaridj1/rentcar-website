@@ -11,6 +11,11 @@ class Car extends Model
 
     protected $guarded = ['id'];
 
+    protected $appends = [
+        'image_link',
+    ];
+
+
     public function getImageLinkAttribute(){
         return asset('storage/' . $this->image);
     }

@@ -182,7 +182,9 @@
 			}
 		}
 
+
     </style>
+    @yield('style')
   </head>
   <body style="background-color: #f2f2f2;" class="custom-scrollbar" >
     <div class="container-fluid px-4 py-2">

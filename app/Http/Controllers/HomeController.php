@@ -2,27 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Car;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function index()
     {
-        return view('home');
+        $cars = Car::where('is_available',true)->orderBy('order_number','asc')->get();
+        return view('frontend.home',compact('cars'));
+    }
+
+    public function getSelfDriveCar(){
+        $cars = Car::where('is_available',true)->orderBy('order_number','asc')->get()->toArray();
+        $data['data'] = $cars;
+        return response()->json(
+            $data,200
+        );
     }
 }
