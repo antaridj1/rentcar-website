@@ -20,4 +20,9 @@ class HomeController extends Controller
             $data,200
         );
     }
+
+    public function detail(Car $car){
+        $isWithDriver = request()->is_with_driver;
+        return view('frontend.detail',compact('car','isWithDriver'));
+    }
 }

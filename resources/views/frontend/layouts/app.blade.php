@@ -21,18 +21,18 @@
 
         @font-face {
             font-family: 'Cina Geo';
-            src: url(frontend/fonts/cina-geo/CinaGEOTest-Medium-BF64015899849c0.otf);
+            src: url(/frontend/fonts/cina-geo/CinaGEOTest-Medium-BF64015899849c0.otf);
             font-weight: bold;
         }
 
         @font-face {
             font-family: 'Cina Geo';
-            src: url(frontend/fonts/cina-geo/CinaGEOTest-Regular-BF640158993b49e.otf);
+            src: url(/frontend/fonts/cina-geo/CinaGEOTest-Regular-BF640158993b49e.otf);
         }
         
         @font-face {
             font-family: 'Cina Geo';
-            src: url(frontend/fonts/cina-geo/CinaGEOTest-Thin-BF6401589a20010.otf);
+            src: url(/frontend/fonts/cina-geo/CinaGEOTest-Thin-BF6401589a20010.otf);
             font-weight: 100;
         }
 
@@ -116,7 +116,7 @@
             padding: 10px 40px;
         }
 
-        .section-car h2{
+         h2{
             color: black;
             font-size: 48px;
             font-weight: bold;
@@ -153,6 +153,10 @@
                 font-weight: bold;
             }
 
+             h2{
+                font-size: 32px;
+            }
+
         }
 
 		@media only screen and (max-width: 767px) {
@@ -187,10 +191,10 @@
     @yield('style')
   </head>
   <body style="background-color: #f2f2f2;" class="custom-scrollbar" >
-    <div class="container-fluid px-4 py-2">
+    
         @yield('section')
         @include('frontend.includes.footer')
-    </div>
+ 
 
     <script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
 
