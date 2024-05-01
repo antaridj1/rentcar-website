@@ -22,7 +22,14 @@ class HomeController extends Controller
     }
 
     public function detail(Car $car){
-        $isWithDriver = request()->is_with_driver;
+        $isWithDriver = false;
+        if(request()->with_driver == 1){
+            if($car->is_with_driver == 1){
+                $isWithDriver = true;
+            }
+            
+        }
+        
         return view('frontend.detail',compact('car','isWithDriver'));
     }
 }

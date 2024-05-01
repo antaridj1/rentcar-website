@@ -125,7 +125,7 @@
         }
 
         .card-car {
-          max-width:300px; 
+          width:300px; 
           border-radius: 10px;
 		  /* box-shadow: 0px 37px 50px -20px rgba(0,0,0,0.1); */
         }
@@ -147,7 +147,30 @@
           color: rgb(93, 93, 93);
         }
 
-        @media only screen and (max-width: 576px) {
+        .footer {
+            background-color: black;
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+        }
+        .footer a {
+            text-decoration: none;
+        }
+        .footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .footer p, .footer a {
+            font-size: 14px;
+            color: gray;
+        }
+
+        .footer img{
+            width: 150px;
+        }
+
+        @media (max-width: 576px) {
             .jumbotron-text h1{
                 font-size: 48px;
                 font-weight: bold;
@@ -157,9 +180,19 @@
                 font-size: 32px;
             }
 
+            .card-car {
+                max-width:300px; 
+                width: 100%;
+                border-radius: 10px;
+            }
+
+            .footer img{
+                width: 80px;
+            }
+
         }
 
-		@media only screen and (max-width: 767px) {
+		@media (max-width: 767px) {
 			.nav-trans .navbar-collapse {
 				background-color: white;
 				border-radius: 10px;
@@ -180,6 +213,27 @@
 
         }
 
+        @media (max-width: 992px){
+            .horizontal-links ul {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            .horizontal-links ul li {
+                margin: 0 10px;
+                display: flex;
+            }
+            .horizontal-links ul li:not(:last-child):after {
+                content: "|";
+                color: gray;
+                margin-left: 10px;
+            }
+		}
+
 		@media (min-width: 992px){
 			.container-car {
 				max-width: 960px;
@@ -197,6 +251,7 @@
  
 
     <script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 
 	<script>
 // 		window.addEventListener('scroll', () => {
