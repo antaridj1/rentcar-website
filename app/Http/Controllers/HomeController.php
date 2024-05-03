@@ -3,14 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Models\Car;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index()
     {
+        $user = User::first();
         $cars = Car::where('is_available',true)->orderBy('order_number','asc')->get();
-        return view('frontend.home',compact('cars'));
+        return view('frontend.home',compact('cars','user'));
     }
 
     public function getSelfDriveCar(){
@@ -29,7 +31,7 @@ class HomeController extends Controller
             }
             
         }
-        
-        return view('frontend.detail',compact('car','isWithDriver'));
+        $user = User::first();
+        return view('frontend.detail',compact('car','isWithDriver','user'));
     }
 }

@@ -245,7 +245,7 @@
     @yield('style')
   </head>
   <body style="background-color: #f2f2f2;" class="custom-scrollbar" >
-    
+    <input type="hidden" id="tel" value="{{$user->tel}}">
         @yield('section')
         @include('frontend.includes.footer')
  
@@ -254,6 +254,15 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 
 	<script>
+
+        // function booking(test, tes, function(e)){
+        //     e.preventDefault();
+        //     var message = 'Halo, saya ingin booking mobil'
+        //     var str = $('#tel').val()
+        //     var phone = str.slice(1);
+        //     window.open('https://wa.me/'+phone+'/?text='+message , "_blank");
+        // }
+
 // 		window.addEventListener('scroll', () => {
 //     const navbar = document.getElementById('navbar');
 //     const hero = document.getElementById('hero');

@@ -19,8 +19,8 @@
                             </div>
                              <h5 class="card-title" style="font-weight: bold;">Whatsapp</h5>
                             <p class="" style="color:grey; font-size:14px">Hubungi kami kapan saja melalui whatsapp</p>
-                            <p class=""><a style="color:black; font-size:14px" href="#">+62 819-3241-5124</a></p>
-                                
+                            <p class=""><a style="color:black; font-size:14px" onclick="booking()" href="#">+62 819-3241-5124</a></p>
+                            <input type="hidden" id="tel" value="{{$user->tel}}">
                         </div>
                     </div>
                 </div>

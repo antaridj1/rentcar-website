@@ -166,12 +166,19 @@
                             </tr>
                         </table>
                         
-                        
-                        
                     </div>
                   <div class="col-12 mt-3">
-                    <a href="{{url('/car')}}/${car.id}?is_with_driver=1" class="btn btn-dark col-12" style="border-radius: 10px;"><i class="bi bi-whatsapp"></i> Booking Via Whatsapp</a>
+                    <a href="#" onclick="booking(this.getAttribute('data-car-name'), this.getAttribute('data-with-driver') === 'true')"
+                        class="btn btn-dark col-12"
+                        style="border-radius: 10px;"
+                        data-tel="{{ $user->phone }}"
+                        data-car-name="{{ $car->name }}"
+                        data-with-driver="{{ $isWithDriver ? 'true' : 'false' }}">
+                            <i class="bi bi-whatsapp"></i> Booking Via Whatsapp
+                        </a>
+
                   </div>
+                  <input type="hidden" id="phone" value="{{$user->phone}}">
                    
                 </div>
             </div>
@@ -306,3 +313,16 @@
 </div>
 
 @endsection
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+     function booking(carName, isWithDriver){
+        let driver = ' tanpa driver'
+        if(isWithDriver == true) {
+            driver = ' dengan driver'
+        }
+            var message = 'Halo, saya mau booking mobil ' + carName + driver
+            var str = $('#phone').val()
+            var phone = str.slice(1);
+            window.open('https://wa.me/'+phone+'/?text='+message , "_blank");
+        }
+</script>
