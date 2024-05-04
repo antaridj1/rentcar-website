@@ -8,7 +8,7 @@
         }
 
         .car-filter .nav-link{
-            /* background-color: #e7e7ea;; */
+            /* background-color: #e7e7ea; */
             color: gray;
             /* border: 1px solid gray;
             border-radius: 50px; */
@@ -16,6 +16,7 @@
     </style>
    @endsection
    @section('section')
+    <div class="container-fluid ">
         @include('frontend.includes.header')
         <section id="cars">
             <div class="section-car col-12 text-center " >
@@ -29,12 +30,12 @@
                     </li>
                 </ul>
                 
-                <div class="container container-car">
-                    <div class="row g-3" id="self-drive">
+                <div class="container-fluid p-0 container-car">
+                    <div class="row g-1 g-sm-2 g-md-3 animate__animated" id="self-drive">
                     
                     </div>
 
-                    <div class="row g-3" id="with-driver">
+                    <div class="row g-1 g-sm-2 g-md-3 animate__animated" id="with-driver">
                     </div>
 
                     <div class="row ">
@@ -44,9 +45,6 @@
                 </div>
             </div>
             
-        </section>
-        <section id="contactus">
-            @include('frontend.includes.contact')
         </section>
 
         {{-- <section>
@@ -58,7 +56,7 @@
             
             
         </section> --}}
-
+</div>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
@@ -73,7 +71,7 @@
                     var withoutDrivers = response['data']['without_driver'];
                     $.each(withoutDrivers, function (index, car) {
                         withoutDriver += 
-                            `<div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                            `<div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center px-0 py-2">
                                 <div class="card card-car border-0 p-2">
                                     <img src="${car.image_link}" alt="...">
                                     <div class="card-body">
@@ -98,7 +96,7 @@
 
                     $.each(withDrivers, function (index, car) {
                         withDriver += 
-                            `<div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                            `<div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center px-0 py-2">
                                     <div class="card card-car border-0 p-2">
                                         <img src="${car.image_link}" alt="...">
                                         <div class="card-body">
@@ -134,6 +132,8 @@
                 e.preventDefault();
                 $('#with-driver').hide();
                 $('#self-drive').show();
+                $('#self-drive').addClass('animatezoomIn');
+                $('#with-driver').removeClass('animatezoomIn');
                 $(this).addClass('active');
                 $('#filter-with-driver').removeClass('active');
             });
@@ -142,6 +142,8 @@
                 e.preventDefault();
                 $('#with-driver').show();
                 $('#self-drive').hide();
+                $('#self-drive').removeClass('animatezoomIn');
+                $('#with-driver').addClass('animatezoomIn');
                 $(this).addClass('active');
                 $('#filter-self-drive').removeClass('active');
             });

@@ -25,9 +25,10 @@
 
 @endsection
 @section('section')
-<div class="container" style="margin-top: 100px;">
+<div class="container-fluid">
+    <div class="row" style="height:90px"></div>
     <div class="row">
-        <div class="col-12 mb-3">
+        <div class="col-12">
             <div class="card" style="border-radius:10px; border:0; background-color:transparent">
                 <div class="card-body pb-0">
                     <nav aria-label="breadcrumb">
@@ -143,7 +144,7 @@
                 </div>
             </div>
         </div> 
-        <div class="col-12 mb-5">
+        <div class="col-12">
             @if(!$isWithDriver)
                 <div class="card mb-3" style="border-radius:10px; border:0">
                     <div class="card-body">

@@ -1,77 +1,41 @@
 @extends('frontend.layouts.app')
 @section('style')
 <style>
-    .navbar img{
-        width: 50px; 
-        height: 50px;
-        border-radius:5px;
-    }
-
-    .accordion-button:not(.collapsed){
-        background-color: #f2f2f2;
-        color:black
-    }
-
-    .accordion-button{
-        color: rgb(32, 32, 32);
-    }
-
-    .price {
-        font-size:20px;
-    }
-
-    @media (min-width: 576px){
-        .navbar img{
-            width:60px; 
-            height:60px;
-             border-radius:10px;
-        }
-
-        .price {
-            font-size:24px;
-        }
-    }
-
-    p {
-        color: rgb(63, 63, 63);
-    }
-
-    
     .car-filter .nav-link.active{
-            background-color: rgb(62, 62, 62);
-            color: white;
-            border-radius: 50px;
-        }
+        background-color: rgb(62, 62, 62);
+        color: white;
+        border-radius: 50px;
+    }
 
-        .car-filter .nav-link{
-            /* background-color: #e7e7ea;; */
-            color: gray;
-            /* border: 1px solid gray;
-            border-radius: 50px; */
-        }
-
-
+    .car-filter .nav-link{
+        /* background-color: #e7e7ea; */
+        color: gray;
+        /* border: 1px solid gray;
+        border-radius: 50px; */
+    }
 </style>
 @endsection
 @section('section')
-@include('frontend.includes.nav')
-<div class="section-car col-12 text-center " style="margin-top: 100px;" >
-    <h2 class="pt-5 pb-3 nimate__animated animate__zoomIn">Koleksi Mobil Terbaik Kami</h2>
-    <ul class="nav car-filter justify-content-center pb-5 pt-2 ">
-        <li class="nav-item nimate__animated animate__zoomIn">
-            <a class="nav-link active" id="filter-self-drive" aria-current="page" href="#">Lepas Kunci</a>
-        </li>
-        <li class="nav-item nimate__animated animate__zoomIn">
-            <a class="nav-link" id="filter-with-driver" href="#">Dengan Sopir</a>
-        </li>
-    </ul>
-    
-    <div class="container container-car">
-        <div class="row g-3" id="self-drive">
+<div class="container-fluid">
+    <div class="row" style="height:90px"></div>
+    <div class="section-car col-12 text-center ">
+        <h2 class="pt-5 pb-3 nimate__animated animate__zoomIn">Koleksi Mobil Kami</h2>
+        <ul class="nav car-filter justify-content-center pb-5 pt-2 ">
+            <li class="nav-item nimate__animated animate__zoomIn">
+                <a class="nav-link active" id="filter-self-drive" aria-current="page" href="#">Lepas Kunci</a>
+            </li>
+            <li class="nav-item nimate__animated animate__zoomIn">
+                <a class="nav-link" id="filter-with-driver" href="#">Dengan Sopir</a>
+            </li>
+        </ul>
         
-        </div>
+        <div class="container container-car">
+            <div class="row g-3" id="self-drive">
+            
+            </div>
 
-        <div class="row g-3" id="with-driver">
+            <div class="row g-3" id="with-driver">
+            </div>
         </div>
     </div>
 </div>

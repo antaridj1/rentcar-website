@@ -191,7 +191,6 @@
             }
 
             .card-car {
-                 
                 width: 100%;
                 border-radius: 10px;
             }
@@ -257,6 +256,10 @@
 			.container-car {
 				max-width: 960px;
 			}
+
+            .card-car {
+                width:300px; 
+            }
 		}
 
 
@@ -271,8 +274,11 @@
     @if(!Route::is('home'))
         @include('frontend.includes.nav')
     @endif
+   
     @yield('section')
     @include('frontend.includes.footer')
+ 
+   
 
 
     <script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
