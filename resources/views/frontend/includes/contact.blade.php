@@ -2,15 +2,15 @@
 
    <div class="col-12 text-center " >
         <div class="row pt-5 pb-3 pb-md-5">
-            <h2 class="col-12">Hubungi Kami</h2>
-            <p class="col-12" style="color:grey;">Anda dapat menghubungi kami kapanpun. Kami siap membantu Anda untuk mendapatkan pengalaman menyewa mobil yang sempurna di Bali.</p>
+            <h2 class="col-12 animate__animated animate__zoomIn">Hubungi Kami</h2>
+            <p class="col-12 animate__animated animate__zoomIn" style="color:grey;">Anda dapat menghubungi kami kapanpun. Kami siap membantu Anda untuk mendapatkan pengalaman menyewa mobil yang sempurna di Bali.</p>
         </div>
       
         <div class="">
             <div class="row g-3">
 
                 <div class="col-12 col-md-4">
-                    <div class="card border-0 p-2">
+                    <div class="card border-0 p-2 animate__animated animate__zoomIn">
                         
                         <!-- <div style="background-color: white; position: absolute; z-index: 9; right: 0;" class="m-0 p-1">IDR250K</div> -->
                         <div class="card-body text-start">
@@ -26,7 +26,7 @@
                 </div>
 
                 <div class="col-12 col-md-4">
-                    <div class="card border-0 p-2">
+                    <div class="card border-0 p-2 animate__animated animate__zoomIn">
                         
                         <!-- <div style="background-color: white; position: absolute; z-index: 9; right: 0;" class="m-0 p-1">IDR250K</div> -->
                         <div class="card-body text-start">
@@ -42,7 +42,7 @@
                 </div>
 
                 <div class="col-12 col-md-4">
-                    <div class="card border-0 p-2">
+                    <div class="card border-0 p-2 animate__animated animate__zoomIn">
                         
                         <!-- <div style="background-color: white; position: absolute; z-index: 9; right: 0;" class="m-0 p-1">IDR250K</div> -->
                         <div class="card-body text-start">

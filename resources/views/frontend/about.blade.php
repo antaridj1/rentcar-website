@@ -1,46 +1,13 @@
 @extends('frontend.layouts.app')
 @section('style')
 <style>
-    .navbar img{
-        width: 50px; 
-        height: 50px;
-        border-radius:5px;
-    }
-
-    .accordion-button:not(.collapsed){
-        background-color: #f2f2f2;
-        color:black
-    }
-
-    .accordion-button{
-        color: rgb(32, 32, 32);
-    }
-
-    .price {
-        font-size:20px;
-    }
-
-    @media (min-width: 576px){
-        .navbar img{
-            width:60px; 
-            height:60px;
-             border-radius:10px;
-        }
-
-        .price {
-            font-size:24px;
-        }
-    }
-
     p {
         color: rgb(63, 63, 63);
     }
 
-
 </style>
 @endsection
 @section('section')
-@include('frontend.includes.nav')
 <div class="container-fluid">
     <div class="row" style="margin-top: 100px;">
         {{-- <div class="col-12 col-md-6" style="overflow: hidden; position: relative;">
@@ -49,7 +16,7 @@
         <div class="col-12 mb-3">
             <div class="card" style="border:0">
                 <div class="container-fluid px-4">
-                    <div class="card-body">
+                    <div class="card-body animate__animated animate__zoomIn">
                         <h3 style="font-weight: bold; font-size:32px">Mengenal Lebih Dekat Bali Bagus Rent Car</h3>
                 
                     </div>
@@ -59,7 +26,7 @@
         <div class="col-12">
             <div class="card" style="border:0">
                 <div class="container-fluid px-4">
-                     <div class="card-body">
+                     <div class="card-body animate__animated animate__zoomIn">
                     
                     <h4 style="font-weight: bold;">Dengan Sopir maupun Lepas Kunci</h4>
                     <p >Selamat datang di Bali Bagus Rent Car, penyewaan mobil terkemuka yang menawarkan beragam pilihan mobil khusus matic di Bali. Kami menyediakan layanan sewa mobil dengan supir atau lepas kunci, sesuai dengan kebutuhan Anda.</p>

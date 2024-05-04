@@ -56,12 +56,12 @@
 @section('section')
 @include('frontend.includes.nav')
 <div class="section-car col-12 text-center " style="margin-top: 100px;" >
-    <h2 class="pt-5 pb-3">Koleksi Mobil Terbaik Kami</h2>
-    <ul class="nav car-filter justify-content-center pb-5 pt-2">
-        <li class="nav-item">
+    <h2 class="pt-5 pb-3 nimate__animated animate__zoomIn">Koleksi Mobil Terbaik Kami</h2>
+    <ul class="nav car-filter justify-content-center pb-5 pt-2 ">
+        <li class="nav-item nimate__animated animate__zoomIn">
             <a class="nav-link active" id="filter-self-drive" aria-current="page" href="#">Lepas Kunci</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item nimate__animated animate__zoomIn">
             <a class="nav-link" id="filter-with-driver" href="#">Dengan Sopir</a>
         </li>
     </ul>

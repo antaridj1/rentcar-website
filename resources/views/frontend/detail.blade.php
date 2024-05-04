@@ -1,12 +1,6 @@
 @extends('frontend.layouts.app')
 @section('style')
 <style>
-    .navbar img{
-        width: 50px; 
-        height: 50px;
-        border-radius:5px;
-    }
-
     .accordion-button:not(.collapsed){
         background-color: #f2f2f2;
         color:black
@@ -21,12 +15,6 @@
     }
 
     @media (min-width: 576px){
-        .navbar img{
-            width:60px; 
-            height:60px;
-             border-radius:10px;
-        }
-
         .price {
             font-size:24px;
         }
@@ -37,7 +25,6 @@
 
 @endsection
 @section('section')
-@include('frontend.includes.nav')
 <div class="container" style="margin-top: 100px;">
     <div class="row">
         <div class="col-12 mb-3">

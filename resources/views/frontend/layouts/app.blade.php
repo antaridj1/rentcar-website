@@ -3,8 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bali Bagus 78 | Sewa Mobil Bali</title>
+    <title>Bali Bagus Rent Car | Sewa Mobil Bali</title>
 	<link rel="icon" type="image/x-icon" href="{{asset('frontend/images/logo.png')}}">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <link href="{{asset('frontend/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
     <style>
@@ -96,6 +100,12 @@
 		.navbar-brand {
             font-weight: bold;
         }
+            
+        .navbar-white img{
+            width: 50px; 
+            height: 50px;
+            border-radius:5px;
+        }
 
         .jumbotron-text h1{
             color: white;
@@ -125,7 +135,7 @@
         }
 
         .card-car {
-          width:300px; 
+           
           border-radius: 10px;
 		  /* box-shadow: 0px 37px 50px -20px rgba(0,0,0,0.1); */
         }
@@ -181,7 +191,7 @@
             }
 
             .card-car {
-                max-width:300px; 
+                 
                 width: 100%;
                 border-radius: 10px;
             }
@@ -234,6 +244,15 @@
             }
 		}
 
+        @media (min-width: 576px){
+        .navbar-white img{
+            width:60px; 
+            height:60px;
+             border-radius:10px;
+        }
+
+    }
+
 		@media (min-width: 992px){
 			.container-car {
 				max-width: 960px;
@@ -241,19 +260,25 @@
 		}
 
 
+
+
+
     </style>
     @yield('style')
-  </head>
-  <body style="background-color: #f2f2f2;" class="custom-scrollbar" >
+</head>
+<body style="background-color: #f2f2f2;" class="custom-scrollbar" >
     <input type="hidden" value="{{$user->phone}}" id="contact_phone">
-        @yield('section')
-        @include('frontend.includes.footer')
- 
+    @if(!Route::is('home'))
+        @include('frontend.includes.nav')
+    @endif
+    @yield('section')
+    @include('frontend.includes.footer')
+
 
     <script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 
-	<script>
+    <script>
 
         // function booking(test, tes, function(e)){
         //     e.preventDefault();
@@ -263,18 +288,18 @@
         //     window.open('https://wa.me/'+phone+'/?text='+message , "_blank");
         // }
 
-// 		window.addEventListener('scroll', () => {
-//     const navbar = document.getElementById('navbar');
-//     const hero = document.getElementById('hero');
-//     const cars = document.getElementById('cars');
+		// window.addEventListener('scroll', () => {
+        //     const navbar = document.getElementById('navbar');
+        //     const hero = document.getElementById('hero');
+        //     const cars = document.getElementById('cars');
 
-//     // Check if hero is at the top of the viewport
-//     if (! (window.scrollY >= hero.offsetTop && window.scrollY < cars.offsetTop)) {
-//         navbar.className = 'navbar navbar-expand-md fixed-top mt-2';
-//     } else {
-//         navbar.className = 'navbar nav-trans navbar-expand-md mt-2';
-//     }
-// });
+        //     // Check if hero is at the top of the viewport
+        //     if (! (window.scrollY >= hero.offsetTop && window.scrollY < cars.offsetTop)) {
+        //         navbar.className = 'navbar navbar-expand-md fixed-top mt-2';
+        //     } else {
+        //         navbar.className = 'navbar nav-trans navbar-expand-md mt-2';
+        //     }
+        // });
 	</script>
 
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
@@ -285,6 +310,7 @@
             var phone = str.slice(1);
             window.open('https://wa.me/'+phone+'/?text='+message , "_blank");
         }
+
 </script>
   
   </body>

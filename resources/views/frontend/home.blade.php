@@ -16,12 +16,10 @@
     </style>
    @endsection
    @section('section')
-   <div class="container-fluid px-4 py-2">
-    <input type="hidden" id="tel" value="{{$user->tel}}">
         @include('frontend.includes.header')
         <section id="cars">
             <div class="section-car col-12 text-center " >
-                <h2 class="pt-5 pb-3">Pilih Mobil Terbaik Kami</h2>
+                <h2 class="pt-5 pb-3 ">Pilih Mobil Terbaik Kami</h2>
                 <ul class="nav car-filter justify-content-center pb-5 pt-2">
                     <li class="nav-item">
                         <a class="nav-link active" id="filter-self-drive" aria-current="page" href="#">Lepas Kunci</a>
@@ -60,7 +58,7 @@
             
             
         </section> --}}
-   </div>
+
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
