@@ -17,8 +17,9 @@
    @endsection
    @section('section')
    <div class="container-fluid px-4 py-2">
+    <input type="hidden" id="tel" value="{{$user->tel}}">
         @include('frontend.includes.header')
-        <section id="section2">
+        <section id="cars">
             <div class="section-car col-12 text-center " >
                 <h2 class="pt-5 pb-3">Pilih Mobil Terbaik Kami</h2>
                 <ul class="nav car-filter justify-content-center pb-5 pt-2">
@@ -26,7 +27,7 @@
                         <a class="nav-link active" id="filter-self-drive" aria-current="page" href="#">Lepas Kunci</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="filter-with-driver" href="#">Dengan Driver</a>
+                        <a class="nav-link" id="filter-with-driver" href="#">Dengan Sopir</a>
                     </li>
                 </ul>
                 
@@ -37,32 +38,33 @@
 
                     <div class="row g-3" id="with-driver">
                     </div>
+
+                    <div class="row ">
+                         <a href="{{route('cars')}}" class="mt-3" style="color:black;text-decoration:none">Lihat Semua Koleksi Mobil <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                   
                 </div>
             </div>
             
         </section>
-          <section id="contactus">
+        <section id="contactus">
             @include('frontend.includes.contact')
         </section>
    </div>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
-        let url = `{{route('get-self-drive-car')}}`
-        var result = '';
+        let url = `{{route('get-cars')}}`
+        let withoutDriver = '';
         let withDriver = '';
         $.ajax({
             url: url,
             type: 'GET',
-            success: function(response) { 
-                // var load = $('#view_more').data('load');
-                
-                if (response['data'].length !== 0) {
-                    var datas = response['data'];
-                    
-
-                    $.each(datas, function (index, car) {
-                        result += 
+            success: function(response) {
+                if (response['data']['without_driver'].length !== 0) {
+                    var withoutDrivers = response['data']['without_driver'];
+                    $.each(withoutDrivers, function (index, car) {
+                        withoutDriver += 
                             `<div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
                                 <div class="card card-car border-0 p-2">
                                     <img src="${car.image_link}" alt="...">
@@ -75,43 +77,45 @@
                                             <p style="font-weight: bold; font-size: 14px;">Rp${car.formated_price}</p><p style="font-size: 14px; color: grey;"> / Hari</p>
                                         </div>  
                                         
-                                        <a href="{{url('/car')}}/${car.id}" class="btn btn-dark col-12" style="border-radius: 15px;"><i class="bi bi-whatsapp"></i> Book</a>
+                                        <a href="{{url('/car')}}/${car.id}" class="btn btn-dark col-12" style="border-radius: 15px;"><i class="bi bi-whatsapp"></i> Booking</a>
                                     </div>
                                 </div>
                             </div>
                         `
-                        if(car.is_with_driver == 1){
-                            withDriver += 
-                                `<div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-                                        <div class="card card-car border-0 p-2">
-                                            <img src="${car.image_link}" alt="...">
-                                            <div class="card-body">
-                                                <div class="category d-flex justify-content-between">
-                                                    <p class="me-3"><i class="bi bi-person "></i> ${car.seat} Penumpang</p>
-                                                </div>
-                                                <h5 class="card-title text-start" style="font-weight: bold;">${car.name}</h5>
-                                                <div class="d-flex">
-                                                    <p style="font-weight: bold; font-size: 14px;">Rp${car.formated_price_with_driver}</p><p style="font-size: 14px; color: grey;"> / 10 Jam</p>
-                                                </div>  
-                                                
-                                                <a href="{{url('/car')}}/${car.id}?with_driver=1" class="btn btn-dark col-12" style="border-radius: 15px;"><i class="bi bi-whatsapp"></i> Book</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                `
-                        }
                         
                     });
-                    $('#self-drive').html(result);
-                    $('#with-driver').hide();
+                    $('#self-drive').html(withoutDriver);
+
+                    var withDrivers = response['data']['with_driver'];
+
+                    $.each(withDrivers, function (index, car) {
+                        withDriver += 
+                            `<div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+                                    <div class="card card-car border-0 p-2">
+                                        <img src="${car.image_link}" alt="...">
+                                        <div class="card-body">
+                                            <div class="category d-flex justify-content-between">
+                                                <p class="me-3"><i class="bi bi-person "></i> ${car.seat} Penumpang</p>
+                                            </div>
+                                            <h5 class="card-title text-start" style="font-weight: bold;">${car.name}</h5>
+                                            <div class="d-flex">
+                                                <p style="font-weight: bold; font-size: 14px;">Rp${car.formated_price_with_driver}</p><p style="font-size: 14px; color: grey;"> / 10 Jam</p>
+                                            </div>  
+                                            
+                                            <a href="{{url('/car')}}/${car.id}?with_driver=1" class="btn btn-dark col-12" style="border-radius: 15px;"><i class="bi bi-whatsapp"></i> Booking</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            `
+                    });
+
+                   
                     $('#with-driver').html(withDriver);
-                    $('#no_data').hide();
-                    
-                } else {
-                    $('#self-drive').hide();
+                    $('#with-driver').hide();
+                }else {
+                  
                     $('#no_data').show()
                 }
-
             }
         });
 

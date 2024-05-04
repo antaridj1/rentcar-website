@@ -89,7 +89,7 @@
                                 @else
                                     {{ $car->is_with_driver == 1 ? 'selected' : '' }}
                                 @endif
-                            >Dengan Driver</option>
+                            >Dengan Sopir</option>
                         </select>
                         
                         <label for="is_with_driver">Keterlibatan Driver</label>
@@ -99,7 +99,7 @@
                 <div class="col-12 {{$car->is_with_driver == 0 ? 'd-none' : '' }}">
                     <div class="form-floating">
                         <input type="number" class="form-control @error('price_with_driver') is-invalid @enderror" value="{{$car->price_with_driver}}" id="price_with_driver" name="price_with_driver" value="{{ @old('price_with_driver') }}">
-                        <label for="price_with_driver">Harga Dengan Driver (Rp)</label>
+                        <label for="price_with_driver">Harga Dengan Sopir (Rp)</label>
                         @error('price_with_driver')
                             <div class="invalid-feedback">
                                 {{$message}}

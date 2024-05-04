@@ -37,35 +37,7 @@
 
 @endsection
 @section('section')
-<div class="container-fluid px-3" style="position: fixed; z-index:1000; top:0.5rem; ">
-    <nav class="navbar navbar-expand-md col-12 " id="navbar" style=" background-color:white; border-radius:10px;box-shadow: 0px 37px 50px -20px rgba(106, 106, 106, 0.1);" >
-        <div class="container-fluid px-3 px-md-5">
-            <img src="{{asset('frontend/images/logo.png')}}" alt="" class="test" >
-        <!-- <a class="navbar-brand" href="#">BALI BAGUS 78</a> -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="bi bi-list" style="color: black;"></i>
-        </button>
-        <div class="collapse navbar-collapse d-md-flex justify-content-md-end" id="navbarSupportedContent2">
-            <ul class="navbar-nav mb-2 mb-lg-0 ">
-            <li class="nav-item ps-2 px-md-3">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item ps-2 px-md-3">
-                <a class="nav-link" href="#">Cars</a>
-            </li>
-            <li class="nav-item ps-2 px-md-3">
-                <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item ps-2">
-                <a class="nav-link" href="#">Contact</a>
-            </li>
-            
-            </ul>
-        
-        </div>
-        </div>
-    </nav>
-</div>
+@include('frontend.includes.nav')
 <div class="container" style="margin-top: 100px;">
     <div class="row">
         <div class="col-12 mb-3">
@@ -124,7 +96,7 @@
                         </tr>
                         <tr>
                             <td style="color: grey">Tipe Sewa</td>
-                            <td>{{$isWithDriver ? 'Dengan Driver' : 'Lepas Kunci'}}</td>
+                            <td>{{$isWithDriver ? 'Dengan Sopir' : 'Lepas Kunci'}}</td>
                         </tr>
 
                     </table>
@@ -132,7 +104,7 @@
             </div>
             <div class="card mb-3" style="border-radius:10px; border:0">
                 <div class="card-body">
-                    <p style="font-weight: bold">Rincian Harga ({{!$isWithDriver ? 'Lepas Kunci' : 'Dengan Driver'}})</p>
+                    <p style="font-weight: bold">Rincian Harga ({{!$isWithDriver ? 'Lepas Kunci' : 'Dengan Sopir'}})</p>
                     <div class="col-12 bg-light p-3" style="border-radius:10px;">
                         <table class="table table-light table-borderless">
                             <tr>
@@ -291,7 +263,7 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOvertime" aria-expanded="true" aria-controls="collapseOvertime">
-                                        Biaya Over-time Penyewaan dengan Driver
+                                        Biaya Over-time Penyewaan Dengan Sopir
                                     </button>
                                 </h2>
                                 <div id="collapseOvertime" class="accordion-collapse collapse" data-bs-parent="#accordionKetentuan">
@@ -318,7 +290,7 @@
      function booking(carName, isWithDriver){
         let driver = ' tanpa driver'
         if(isWithDriver == true) {
-            driver = ' dengan driver'
+            driver = ' Dengan Sopir'
         }
             var message = 'Halo, saya mau booking mobil ' + carName + driver
             var str = $('#phone').val()

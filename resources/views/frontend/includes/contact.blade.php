@@ -3,7 +3,7 @@
    <div class="col-12 text-center " >
         <div class="row pt-5 pb-3 pb-md-5">
             <h2 class="col-12">Hubungi Kami</h2>
-            <p class="col-12" style="color:grey;">Hubungi kami kapan saja melalui whatsapp</p>
+            <p class="col-12" style="color:grey;">Anda dapat menghubungi kami melalui WhatsApp, telepon, DM Instagram, atau dengan langsung berkunjung ke kantor kami. Kami siap membantu Anda untuk mendapatkan pengalaman menyewa mobil yang sempurna di Bali.</p>
         </div>
       
         <div class="">

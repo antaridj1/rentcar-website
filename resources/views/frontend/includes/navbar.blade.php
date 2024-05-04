@@ -8,16 +8,16 @@
     <div class="collapse navbar-collapse d-md-flex justify-content-md-end" id="navbarSupportedContent">
         <ul class="navbar-nav mb-2 mb-lg-0 ">
         <li class="nav-item ps-2 px-md-3">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="{{route('home')}}">Beranda</a>
         </li>
         <li class="nav-item ps-2 px-md-3">
-            <a class="nav-link" href="#">Cars</a>
+            <a class="nav-link" href="{{route('cars')}}">Koleksi Mobil</a>
         </li>
         <li class="nav-item ps-2 px-md-3">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="{{route('about')}}">Tentang Kami</a>
         </li>
         <li class="nav-item ps-2">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="{{route('contact')}}">Kontak</a>
         </li>
         
         </ul>

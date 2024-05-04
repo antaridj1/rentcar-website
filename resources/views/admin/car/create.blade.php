@@ -74,7 +74,7 @@
                     <div class="form-floating">
                         <select class="form-select" id="is_with_driver" name="is_with_driver" aria-label="Floating label select example">
                             <option value="0" {{ old('is_with_driver') == '0' ? 'selected' : '' }}>Tanpa Driver</option>
-                            <option value="1" {{ old('is_with_driver') == '1' ? 'selected' : '' }}>Dengan Driver</option>
+                            <option value="1" {{ old('is_with_driver') == '1' ? 'selected' : '' }}>Dengan Sopir</option>
                         </select>
                         <label for="is_with_driver">Keterlibatan Driver</label>
                     </div>
@@ -84,7 +84,7 @@
                 <div class="col-12 {{old('is_with_driver') == 0 ? 'd-none' : '' }}">
                     <div class="form-floating">
                         <input type="number" class="form-control @error('price_with_driver') is-invalid @enderror" id="price_with_driver" name="price_with_driver" value="{{ @old('price_with_driver') }}">
-                        <label for="price_with_driver">Harga Dengan Driver (Rp) / 10 jam</label>
+                        <label for="price_with_driver">Harga Dengan Sopir (Rp) / 10 jam</label>
                         @error('price_with_driver')
                             <div class="invalid-feedback">
                                 {{$message}}

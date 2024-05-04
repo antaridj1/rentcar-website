@@ -109,7 +109,7 @@
             font-weight: 100;
         }
 
-        .jumbotron-text button{
+        .jumbotron-text a{
             font-weight: bold;
             font-size: 14px;
             border-radius: 50px;
@@ -245,7 +245,6 @@
     @yield('style')
   </head>
   <body style="background-color: #f2f2f2;" class="custom-scrollbar" >
-    <input type="hidden" id="tel" value="{{$user->tel}}">
         @yield('section')
         @include('frontend.includes.footer')
  
