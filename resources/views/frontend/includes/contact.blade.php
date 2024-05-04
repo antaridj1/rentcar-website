@@ -3,7 +3,7 @@
    <div class="col-12 text-center " >
         <div class="row pt-5 pb-3 pb-md-5">
             <h2 class="col-12">Hubungi Kami</h2>
-            <p class="col-12" style="color:grey;">Anda dapat menghubungi kami melalui WhatsApp, telepon, DM Instagram, atau dengan langsung berkunjung ke kantor kami. Kami siap membantu Anda untuk mendapatkan pengalaman menyewa mobil yang sempurna di Bali.</p>
+            <p class="col-12" style="color:grey;">Anda dapat menghubungi kami kapanpun. Kami siap membantu Anda untuk mendapatkan pengalaman menyewa mobil yang sempurna di Bali.</p>
         </div>
       
         <div class="">
@@ -19,7 +19,7 @@
                             </div>
                              <h5 class="card-title" style="font-weight: bold;">Whatsapp</h5>
                             <p class="" style="color:grey; font-size:14px">Hubungi kami kapan saja melalui whatsapp</p>
-                            <p class=""><a style="color:black; font-size:14px" onclick="booking()" href="#">+62 819-3241-5124</a></p>
+                            <p class=""><a style="color:black; font-size:14px" onclick="contact()" href="#">{{$user->phone}}</a></p>
                             <input type="hidden" id="tel" value="{{$user->tel}}">
                         </div>
                     </div>
@@ -35,7 +35,7 @@
                             </div>
                              <h5 class="card-title" style="font-weight: bold;">Instagram</h5>
                             <p class="" style="color:grey; font-size:14px">Hubungi melalui direct message Instagram kami</p>
-                            <p class=""> <a style="color:black; font-size:14px" href="#">@bagus_bali_78</a></p>
+                            <p class=""> <a style="color:black; font-size:14px" href="https://www.instagram.com/bali_bagus78/">@bagus_bali_78</a></p>
                                 
                         </div>
                     </div>
@@ -50,8 +50,8 @@
                                 <i class="bi bi-geo-alt shadow-sm "style="border: 1px solid rgb(200, 200, 200); padding:8px 10px; border-radius:5px; "></i>
                             </div>
                              <h5 class="card-title" style="font-weight: bold;">Kunjungi Kami</h5>
-                            <p class="" style="color:grey; font-size:14px">Kunjungi langsung ke Bali Bagus 78 Rentcar</p>
-                            <p class=""> <a style="color:black; font-size:14px" href="#">Lihat Google Maps</a></p>
+                            <p class="" style="color:grey; font-size:14px">Kunjungi langsung ke Bali Bagus Rentcar</p>
+                            <p class=""> <a style="color:black; font-size:14px" href="https://maps.app.goo.gl/gquSe3MT8Qhw6eRu5?g_st=atm">Lihat Google Maps</a></p>
                                 
                         </div>
                     </div>

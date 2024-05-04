@@ -245,6 +245,7 @@
     @yield('style')
   </head>
   <body style="background-color: #f2f2f2;" class="custom-scrollbar" >
+    <input type="hidden" value="{{$user->phone}}" id="contact_phone">
         @yield('section')
         @include('frontend.includes.footer')
  
@@ -275,6 +276,16 @@
 //     }
 // });
 	</script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+    function contact(){
+            var message = 'Halo, saya ingin bertanya perihal rent car '
+            var str = $('#contact_phone').val()
+            var phone = str.slice(1);
+            window.open('https://wa.me/'+phone+'/?text='+message , "_blank");
+        }
+</script>
   
   </body>
 </html>

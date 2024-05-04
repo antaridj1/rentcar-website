@@ -7,18 +7,18 @@
     </button>
     <div class="collapse navbar-collapse d-md-flex justify-content-md-end" id="navbarSupportedContent">
         <ul class="navbar-nav mb-2 mb-lg-0 ">
-        <li class="nav-item ps-2 px-md-3">
-            <a class="nav-link active" aria-current="page" href="{{route('home')}}">Beranda</a>
-        </li>
-        <li class="nav-item ps-2 px-md-3">
-            <a class="nav-link" href="{{route('cars')}}">Koleksi Mobil</a>
-        </li>
-        <li class="nav-item ps-2 px-md-3">
-            <a class="nav-link" href="{{route('about')}}">Tentang Kami</a>
-        </li>
-        <li class="nav-item ps-2">
-            <a class="nav-link" href="{{route('contact')}}">Kontak</a>
-        </li>
+            <li class="nav-item ps-2 px-md-3">
+                <a class="nav-link {{Route::is('home')? 'active' : ''}}" aria-current="page" href="{{route('home')}}">Beranda</a>
+            </li>
+            <li class="nav-item ps-2 px-md-3">
+                <a class="nav-link {{Route::is('cars') || Route::is('detail') ? 'active' : ''}}" href="{{route('cars')}}" >Koleksi Mobil</a>
+            </li>
+            <li class="nav-item ps-2 px-md-3">
+                <a class="nav-link {{Route::is('about')? 'active' : ''}}" href="{{route('about')}}">Tentang Kami</a>
+            </li>
+            <li class="nav-item ps-2">
+                <a class="nav-link {{Route::is('contact')? 'active' : ''}}" href="{{route('contact')}}">Kontak</a>
+            </li>
         
         </ul>
     

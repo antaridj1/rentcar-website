@@ -50,6 +50,16 @@
         <section id="contactus">
             @include('frontend.includes.contact')
         </section>
+
+        {{-- <section>
+            <div class="row">
+                <div class="col-12">
+                    <img src="{{asset('frontend\images\front-view-road-from-driver-seat.jpg')}}" style="width: 100%; height:300px; object-fit:cover; filter:blur(2px)" alt="">
+                </div> 
+            </div>
+            
+            
+        </section> --}}
    </div>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

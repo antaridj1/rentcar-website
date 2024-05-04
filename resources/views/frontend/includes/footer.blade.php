@@ -23,7 +23,7 @@
                     </div>
                     <div class=" col-lg-4 d-flex justify-content-center">
                         <div class="ps-lg-3">
-                            <h5>BALI BAGUS 78 RENT CAR</h5>
+                            <h5>BALI BAGUS RENT CAR</h5>
                             <p>Menyediakan layanan rental mobil matic yang terpercaya dan nyaman untuk perjalanan Anda.</p>
                         </div>
                     </div>
@@ -31,10 +31,10 @@
                         <div class=" horizontal-links">
                             <h5>Tautan</h5>
                             <ul class="list-unstyled">
-                                <li><a href="#">Beranda</a></li>
-                                <li><a href="#">Mobil</a></li>
-                                <li><a href="#">Tentang</a></li>
-                                <li><a href="#">Kontak</a></li>
+                                <li><a href="{{route('home')}}">Beranda</a></li>
+                                <li><a href="{{route('cars')}}">Koleksi Mobil</a></li>
+                                <li><a href="{{route('about')}}">Tentang</a></li>
+                                <li><a href="{{route('contact')}}">Kontak</a></li>
                             </ul>
                         </div>
                     </div>
@@ -42,16 +42,16 @@
                         <div class=" horizontal-links">
                             <h5>Hubungi Kami</h5>
                             <ul class="list-unstyled">
-                                <li><a href="#"><i class="bi bi-geo-alt"></i> Jl. Merdeka, Kuta, Badung, Bali</a></li>
-                                <li><a href="#"><i class="bi bi-instagram"></i> Bali_Bagus78</a></li>
-                                <li><a href="#"><i class="bi bi-whatsapp"></i> +62 819-3241-5124</a></li>
+                                <li><a href="https://maps.app.goo.gl/gquSe3MT8Qhw6eRu5?g_st=atm"><i class="bi bi-geo-alt"></i> Jl. Merdeka, Kuta, Badung, Bali</a></li>
+                                <li><a href="https://www.instagram.com/bali_bagus78/"><i class="bi bi-instagram"></i> Bali_Bagus78</a></li>
+                                <li><a href="#" onclick="contact()"><i class="bi bi-whatsapp"></i> {{$user->phone}}</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12 text-center">
-                        <p class="copyright">&copy; 2024 Bali Bagus 78 Rent Car. All Rights Reserved.</p>
+                        <p class="copyright">&copy; 2024 Bali Bagus Rent Car. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>

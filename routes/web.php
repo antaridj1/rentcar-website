@@ -19,8 +19,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/get-cars', [HomeController::class, 'getCars'])->name('get-cars');
-Route::get('/get-cars-all', [HomeController::class, 'getCarsAll'])->name('get-cars-all');
 
 Auth::routes();
 
@@ -36,8 +34,9 @@ Route::middleware('auth')->group(function(){
     });
 });
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/about', [App\Http\Controllers\AboutController::class, 'index'])->name('about');
-Route::get('/cars', [App\Http\Controllers\HomeController::class, 'cars'])->name('cars');
-Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact'])->name('contact');
-Route::get('/car/{car}', [App\Http\Controllers\HomeController::class, 'detail'])->name('detail');
+Route::get('/cars', [HomeController::class, 'cars'])->name('cars');
+Route::get('/car/{car}', [HomeController::class, 'detail'])->name('detail');
+Route::get('/get-cars', [HomeController::class, 'getCars'])->name('get-cars');
+Route::get('/get-cars-all', [HomeController::class, 'getCarsAll'])->name('get-cars-all');
+Route::get('/about', [HomeController::class, 'about'])->name('about');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');

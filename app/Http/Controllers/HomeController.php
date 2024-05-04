@@ -57,6 +57,11 @@ class HomeController extends Controller
         return view('frontend.cars',compact('cars','user'));
     }
 
+    public function about(){
+        $user = User::first();
+        return view('frontend.about',compact('user'));
+    }
+
     public function contact(){
         $user = User::first();
         return view('frontend.contact',compact('user'));
