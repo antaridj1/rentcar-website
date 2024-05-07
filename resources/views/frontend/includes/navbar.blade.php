@@ -1,7 +1,7 @@
 <nav class="navbar nav-trans navbar-expand-md col-12 animate__animated animate__fadeInLeft" id="navbar" style="position: absolute; z-index: 10; top: 0;" >
     <div class="container-fluid px-3 px-md-5">
-        <img src="{{asset('frontend/images/logo.png')}}" alt="" style="width: 70px; height: 70px;" >
-    <!-- <a class="navbar-brand" href="#">BALI BAGUS 78</a> -->
+        <img src="{{asset('frontend/images/logo.png')}}" alt="bali bagus rentcar" style="width: 70px; height: 70px;" >
+    <!-- <a class="navbar-brand" href="#">Bali Bagus Rent Car</a> -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="bi bi-list" style="color: white;"></i>
     </button>

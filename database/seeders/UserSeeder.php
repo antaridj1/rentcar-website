@@ -14,10 +14,11 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         User::create([
-            'name'  => 'Bali Bagus 78',
+            'name'  => 'Bali Bagus',
             'email' => 'balibagus78@gmail.com',
-            'phone' => '085157734785',
-            'password'  => bcrypt('asdasdasd')
+            'phone' => '+6281932415124',
+            'password'  => bcrypt('asdasdasd'),
+            'instagram_link' => 'https://www.instagram.com/bali_bagus78/',
         ]);
     }
 }

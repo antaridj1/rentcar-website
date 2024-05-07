@@ -77,7 +77,7 @@
                         </tr>
                         <tr>
                             <td style="color: grey">Jenis</td>
-                            <td>City Car (Automatic)</td>
+                            <td>{{$car->car_type->name}} (Matic)</td>
                         </tr>
                         <tr>
                             <td style="color: grey">Seat</td>

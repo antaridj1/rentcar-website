@@ -2,7 +2,7 @@
     <nav class="navbar navbar-white navbar-expand-md col-12 " id="navbar" style="background-color:white; border-radius:10px;box-shadow: 0px 37px 50px -20px rgba(106, 106, 106, 0.1);" >
         <div class="container-fluid px-3 px-md-5">
             <img src="{{asset('frontend/images/logo.png')}}" alt="" class="animate__animated animate__fadeInLeft" >
-        <!-- <a class="navbar-brand" href="#">BALI BAGUS 78</a> -->
+        <!-- <a class="navbar-brand" href="#">Bali Bagus Rent Car</a> -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-list" style="color: black;"></i>
         </button>

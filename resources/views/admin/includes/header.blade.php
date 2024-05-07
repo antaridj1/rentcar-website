@@ -2,7 +2,7 @@
   <div class="d-flex align-items-center justify-content-between">
     <a href="{{url('/')}}" class="logo d-flex align-items-center">
       <img src="{{asset('frontend/images/logo.png')}}" alt="">
-      <span class="d-none d-lg-block">Bali Bagus 78</span>
+      <span class="d-none d-lg-block">Bali Bagus</span>
     </a>
     <i class="bi bi-list toggle-sidebar-btn"></i>
   </div><!-- End Logo -->
@@ -11,7 +11,7 @@
     <ul class="d-flex align-items-center">
       <li class="nav-item dropdown pe-3">
         <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-          <img src="{{asset('assets/img/person.png')}}" alt="Profile" class="rounded-circle">
+          <i class="bi bi-person-circle"></i>
           <span class="d-none d-md-block dropdown-toggle ps-2"> {{auth()->user()->name}}</span>
         </a><!-- End Profile Iamge Icon -->
 

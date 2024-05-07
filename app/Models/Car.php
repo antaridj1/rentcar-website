@@ -17,7 +17,9 @@ class Car extends Model
         'formated_price_with_driver'
     ];
 
-
+    public function car_type(){
+        return $this->belongsTo(CarType::class, 'car_type_id');
+    }
     public function getImageLinkAttribute(){
         return asset('storage/' . $this->image);
     }

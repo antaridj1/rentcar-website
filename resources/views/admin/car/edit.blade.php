@@ -6,7 +6,7 @@
         <h1>Edit Mobil</h1>
         <nav>
             <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="{{route('dashboard')}}">Dashboard</a></li>
             <li class="breadcrumb-item active">Edit Mobil</li>
             </ol>
         </nav>
@@ -47,6 +47,27 @@
                                 {{$message}}
                             </div>
                         @enderror
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="form-floating">
+                        <select class="form-select" id="type" name="car_type_id" aria-label="Floating label select example">
+                            @foreach ($carTypes as $type)
+                                <option value="{{$type->id}}" 
+                                    @if(old('car_type_id') !== null)
+                                        {{ old('car_type_id') == $type->id ? 'selected' : '' }}
+                                    @else
+                                        {{ $car->car_type_id == $type->id ? 'selected' : '' }}
+                                    @endif
+                                    >{{$type->name}}
+                                </option>
+                       
+                            @endforeach
+
+
+                        </select>
+                        <label for="type">Jenis Mobil</label>
                     </div>
                 </div>
 

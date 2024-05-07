@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('cars', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->unsignedBigInteger('car_type_id')->nullable();
             $table->integer('seat');
             $table->string('image');
             $table->integer('price');
@@ -22,6 +23,8 @@ return new class extends Migration
             $table->tinyInteger('is_available')->default(true);
             $table->tinyInteger('order_number');
             $table->timestamps();
+
+            $table->foreign('car_type_id')->references('id')->on('car_types')->onDelete('cascade');
         });
     }
 

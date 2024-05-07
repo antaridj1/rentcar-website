@@ -46,6 +46,16 @@
                         @enderror
                     </div>
                 </div>
+                <div class="col-12">
+                    <div class="form-floating">
+                        <select class="form-select" id="type" name="car_type_id" aria-label="Floating label select example">
+                            @foreach ($carTypes as $type)
+                                 <option value="{{$type->id}}" {{ old('car_type_id') == $type->id ? 'selected' : '' }}>{{$type->name}}</option>
+                            @endforeach
+                        </select>
+                        <label for="type">Jenis Mobil</label>
+                    </div>
+                </div>
 
                 <div class="col-12">
                     <div class="form-floating">

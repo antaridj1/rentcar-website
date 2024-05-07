@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Car;
+use App\Models\CarType;
 use Illuminate\Http\Request;
 
 class CarController extends Controller
@@ -21,7 +22,8 @@ class CarController extends Controller
      */
     public function create()
     {
-        return view('admin.car.create');
+        $carTypes = CarType::all();
+        return view('admin.car.create',compact('carTypes'));
     }
 
     /**
@@ -33,6 +35,7 @@ class CarController extends Controller
             'name' => 'required',
             'seat'  => 'required|numeric|min:1',
             'price' => 'required|numeric|min:1',
+            'car_type_id' => 'required',
             'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg',
         ];
 
@@ -48,6 +51,7 @@ class CarController extends Controller
             'name' => $request->name,
             'seat'  => $request->seat,
             'price' => $request->price,
+            'car_type_id' => $request->car_type_id,
             'image' => $image_path,
             'order_number' => Car::get()->count() + 1
         ];
@@ -76,7 +80,8 @@ class CarController extends Controller
      */
     public function edit(Car $car)
     {
-        return view('admin.car.edit',compact('car'));
+        $carTypes = CarType::all();
+        return view('admin.car.edit',compact('car','carTypes'));
     }
 
     /**
@@ -88,6 +93,7 @@ class CarController extends Controller
             'name' => 'required',
             'seat'  => 'required|numeric|min:1',
             'price' => 'required|numeric|min:1',
+            'car_type_id' => 'required',
             'image' => 'image|mimes:jpg,png,jpeg,svg',
         ];
 
@@ -112,6 +118,7 @@ class CarController extends Controller
             'seat'  => $request->seat,
             'price' => $request->price,
             'image' => $image_path,
+            'car_type_id' => $request->car_type_id,
             'is_with_driver' => $request->is_with_driver,
             'is_available' => $request->is_available
         ];
@@ -126,7 +133,7 @@ class CarController extends Controller
 
         return redirect('car')
             ->with('status','success')
-            ->with('message','Data berhasil ditambah');
+            ->with('message','Data berhasil diedit');
     }
 
     /**
