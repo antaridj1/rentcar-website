@@ -38,7 +38,7 @@
                     <div class="row g-1 g-sm-2 g-md-3 animate__animated" id="with-driver">
                     </div>
 
-                    <div class="row ">
+                    <div class="row mb-3">
                          <a href="{{route('cars')}}" class="mt-3" style="color:black;text-decoration:none">Lihat Semua Koleksi Mobil <i class="bi bi-arrow-right"></i></a>
                     </div>
                    

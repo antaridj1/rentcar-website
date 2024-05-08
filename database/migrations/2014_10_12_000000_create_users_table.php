@@ -17,7 +17,11 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('phone');
             $table->string('password');
-            $table->string('instagram_link')->nullable();
+            $table->text('address')->nullable();
+            $table->text('maps_link')->nullable();
+            $table->text('embed_maps')->nullable();
+            $table->text('instagram_username')->nullable();
+            $table->text('instagram_link')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

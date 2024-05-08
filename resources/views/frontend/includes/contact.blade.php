@@ -19,7 +19,7 @@
                             </div>
                              <h5 class="card-title" style="font-weight: bold;">Whatsapp</h5>
                             <p class="" style="color:grey; font-size:14px">Hubungi kami kapan saja melalui whatsapp</p>
-                            <p class=""><a style="color:black; font-size:14px" onclick="contact()" href="#">{{$user->phone}}</a></p>
+                            <p class=""><a style="color:black; font-size:14px" onclick="contact()" href="#"> {{$user->phone}}</a></p>
                             <input type="hidden" id="tel" value="{{$user->tel}}">
                         </div>
                     </div>
@@ -35,7 +35,7 @@
                             </div>
                              <h5 class="card-title" style="font-weight: bold;">Instagram</h5>
                             <p class="" style="color:grey; font-size:14px">Hubungi melalui direct message Instagram kami</p>
-                            <p class=""> <a style="color:black; font-size:14px" href="https://www.instagram.com/bali_bagus78/">@bagus_bali_78</a></p>
+                            <p class=""> <a style="color:black; font-size:14px" href="{{$user->instagram_link}}"> {{$user->instagram_username}}</a></p>
                                 
                         </div>
                     </div>
@@ -51,7 +51,7 @@
                             </div>
                              <h5 class="card-title" style="font-weight: bold;">Kunjungi Kami</h5>
                             <p class="" style="color:grey; font-size:14px">Kunjungi langsung ke Bali Bagus Rentcar</p>
-                            <p class=""> <a style="color:black; font-size:14px" href="https://maps.app.goo.gl/gquSe3MT8Qhw6eRu5?g_st=atm">Lihat Google Maps</a></p>
+                            <p class=""> <a style="color:black; font-size:14px" href="{{$user->maps_link}}">Lihat Google Maps</a></p>
                                 
                         </div>
                     </div>

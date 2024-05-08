@@ -16,6 +16,13 @@
 			</a>
 		</li>
 
+		<li class="nav-item">
+			<a class="nav-link {{Route::is('website.edit')? '' : 'collapsed'}}" href="{{route('website.edit')}}">
+				<i class="bi bi-journal-text"></i>
+				<span>Edit Website</span>
+			</a>
+		</li>
+
 
 	</ul>
 

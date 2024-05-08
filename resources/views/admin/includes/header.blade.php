@@ -2,7 +2,7 @@
   <div class="d-flex align-items-center justify-content-between">
     <a href="{{url('/')}}" class="logo d-flex align-items-center">
       <img src="{{asset('frontend/images/logo.png')}}" alt="">
-      <span class="d-none d-lg-block">Bali Bagus</span>
+      <span class="d-none d-lg-block">{{auth()->user()->name}}</span>
     </a>
     <i class="bi bi-list toggle-sidebar-btn"></i>
   </div><!-- End Logo -->

@@ -10,7 +10,7 @@
             <div class=" col-lg-4 d-flex justify-content-center">
                 <div class="ps-lg-3">
                     <h5>BALI BAGUS RENT CAR</h5>
-                    <p>penyewaan mobil terkemuka yang menawarkan beragam pilihan mobil khusus matic di Bali. Kami menyediakan layanan sewa mobil dengan supir atau lepas kunci, sesuai dengan kebutuhan Anda.</p>
+                    <p>Penyewaan mobil terkemuka yang menawarkan beragam pilihan mobil khusus matic di Bali. Kami menyediakan layanan sewa mobil dengan supir atau lepas kunci, sesuai dengan kebutuhan Anda.</p>
                 </div>
             </div>
             <div class="col-lg-2 mb-3 mb-md-0 d-flex justify-content-center">
@@ -28,8 +28,8 @@
                 <div class=" horizontal-links">
                     <h5>Hubungi Kami</h5>
                     <ul class="list-unstyled">
-                        <li><a href="https://maps.app.goo.gl/gquSe3MT8Qhw6eRu5?g_st=atm"><i class="bi bi-geo-alt"></i> Jl. Merdeka, Kuta, Badung, Bali</a></li>
-                        <li><a href="https://www.instagram.com/bali_bagus78/"><i class="bi bi-instagram"></i> Bali_Bagus78</a></li>
+                        <li><a href="{{$user->maps_link}}"><i class="bi bi-geo-alt"></i> {{$user->address}}</a></li>
+                        <li><a href="{{$user->instagram_link}}"><i class="bi bi-instagram"></i> {{$user->instagram_username}}</a></li>
                         <li><a href="#" onclick="contact()"><i class="bi bi-whatsapp"></i> {{$user->phone}}</a></li>
                     </ul>
                 </div>

@@ -3,7 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:url" content="{{ ('/') }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sewa Mobil di Bali Gratis Antar ke Airport" />
     <title>Bali Bagus Rent Car | Sewa Mobil Bali</title>
+    <meta name="description" content="{{ getMetaTag('og_description') }}">
 	<link rel="icon" type="image/x-icon" href="{{asset('frontend/images/logo.png')}}">
     <link
     rel="stylesheet"

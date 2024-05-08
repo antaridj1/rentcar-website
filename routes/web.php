@@ -26,6 +26,8 @@ Route::middleware('auth')->group(function(){
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/profile', [UserController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [UserController::class, 'update'])->name('profile.update');
+    Route::get('/website', [UserController::class, 'editWebsite'])->name('website.edit');
+    Route::patch('/website', [UserController::class, 'updateWebsite'])->name('website.update');
 
     Route::group(['prefix' => 'car', 'as' => 'car.'],function () {
         Route::resource('/', CarController::class)->parameters([

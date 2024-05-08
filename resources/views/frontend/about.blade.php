@@ -5,6 +5,11 @@
         color: rgb(63, 63, 63);
     }
 
+    iframe{
+        width: 100% !important;
+        height: 300 !important;
+    }
+
 </style>
 @endsection
 @section('section')
@@ -34,8 +39,10 @@
                     <h4 style="font-weight: bold;">Banyak Pilihan Mobil</h4>
                     <p>Kami memiliki berbagai jenis mobil untuk disewakan, mulai dari city car yang praktis, hatchback yang irit, hingga SUV dan MPV untuk perjalanan keluarga atau rombongan. Anda bisa memilih mobil sesuai dengan kebutuhan dan preferensi Anda.</p>  
                     <h4 style="font-weight: bold;">Berlokasi di Bali</h4>
-                    <p>Kunjungi kami di Jalan Merdeka, Kuta, Badung, untuk mendapatkan layanan terbaik dan mobil berkualitas. Kami siap membantu Anda menjadikan perjalanan di Bali lebih nyaman dan menyenangkan.</p></p>
-                    <iframe class="col-12 mb-3" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3943.7725366275818!2d115.18198439999999!3d-8.7131375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd246a486d6fbd3%3A0x2214b654dedd458d!2s75PJ%2BPQX%2C%20Kec.%20Kuta%2C%20Kabupaten%20Badung%2C%20Bali!5e0!3m2!1sid!2sid!4v1714790520217!5m2!1sid!2sid" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <p>Kunjungi kami di {{$user->address}} untuk mendapatkan layanan terbaik dan mobil berkualitas. Kami siap membantu Anda menjadikan perjalanan di Bali lebih nyaman dan menyenangkan.</p></p>
+                    <div class="col-12 mb-3">
+                        {!!$user->embed_maps!!}
+                    </div>
                     <h4 style="font-weight: bold;">Pengantaran Gratis ke Bandara</h3>
                     <p>Dan yang lebih menarik, kami menawarkan biaya pengantaran gratis ke Bandara Ngurah Rai, sehingga Anda tidak perlu khawatir untuk mencapai tujuan awal perjalanan Anda. Hubungi kami sekarang untuk reservasi dan informasi lebih lanjut.</p>
                     <h4 style="font-weight: bold;">Telah Melayani Lebih dari 100 Pelanggan</h3>
