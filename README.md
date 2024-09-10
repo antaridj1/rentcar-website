@@ -1,4 +1,4 @@
-<p align="center"><a href="https://github.com/antaridj1/rentcar" target="_blank"><img src="https://github.com/antaridj1/rentcar/blob/bd8d4ab661476b2fdd486d682bd11084970ad283/public/frontend/images/logo.png" width="400" alt="RentCar Logo"></a></p>
+<p align="center"><a href="https://github.com/antaridj1/rentcar-website" target="_blank"><img src="https://github.com/antaridj1/rentcar-website/blob/bd8d4ab661476b2fdd486d682bd11084970ad283/public/frontend/images/logo.png" width="400" alt="RentCar Logo"></a></p>
 
 
 ## About Bali Bagus Rentcar Website
@@ -26,8 +26,8 @@
 1. **Clone Repository**
 
    ```bash
-    git clone https://github.com/your-username/rentcar.git
-    cd rentcar
+    git clone https://github.com/your-username/rentcar-website.git
+    cd rentcar-website
     composer install
     ```
 2. **Create Environtment**
