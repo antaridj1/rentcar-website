@@ -1,4 +1,5 @@
 @extends('frontend.layouts.app')
+@section('title','Sewa Mobil Matic di Bali | Tentang')
 @section('style')
 <style>
     p {

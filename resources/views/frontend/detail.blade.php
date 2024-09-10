@@ -1,4 +1,5 @@
 @extends('frontend.layouts.app')
+@section('title','Sewa Mobil Matic di Bali | Detail')
 @section('style')
 <style>
     .accordion-button:not(.collapsed){

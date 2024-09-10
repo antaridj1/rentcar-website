@@ -3,12 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:url" content="{{ route('home') }}" />
+    <meta property="og:url" content="{{url('/')}}" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Sewa Mobil Matic di Bali - Lepas Kunci atau Dengan Supir (Gratis Antar ke Airport)" />
     <meta name="description" content="Sewa Mobil Matic di Bali Lepas Kunci Maupun dengan Supir! Nikmati Layanan Gratis Antar ke Ngurah Rai Airport. Bali Bagus Rentcar menyediakan mobil seperti Agya, New Brio, Jazz RS, Baleno, HRV, New Rush, Xpander, New Avanza, Raize, dan Inova Reborn.">
-    <meta property="og:image" content="{{ asset('frontend/images/logo-ogimage.jpg') }}" />
-    <title>Sewa Mobil Matic di Bali - Bali Bagus Rentcar </title>
+    <meta property="og:description" content="Sewa Mobil Matic di Bali Lepas Kunci Maupun dengan Supir! Nikmati Layanan Gratis Antar ke Ngurah Rai Airport. Bali Bagus Rentcar menyediakan mobil seperti Agya, New Brio, Jazz RS, Baleno, HRV, New Rush, Xpander, New Avanza, Raize, dan Inova Reborn." />
+    <meta property="og:image" content="{{asset('frontend/images/logo-ogimage.jpg')}}" />
+    <title>@yield('title')</title>
+    <link rel="canonical" href="{{url('/')}}" />
 
     <link rel="icon" type="image/x-icon" href="{{asset('frontend/images/logo.png')}}">
     <link

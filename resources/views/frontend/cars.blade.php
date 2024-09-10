@@ -1,4 +1,5 @@
 @extends('frontend.layouts.app')
+@section('title','Sewa Mobil Matic di Bali | Koleksi Mobil')
 @section('style')
 <style>
     .car-filter .nav-link.active{

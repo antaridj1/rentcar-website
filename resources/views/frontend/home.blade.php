@@ -1,6 +1,7 @@
    @extends('frontend.layouts.app')
+   @section('title','Sewa Mobil Matic di Bali | Bali Bagus Rentcar')
    @section('style')
-    <style>
+    <style> 
         .car-filter .nav-link.active{
             background-color: rgb(62, 62, 62);
             color: white;
